@@ -1,4 +1,9 @@
 # Prerequisites
+
+build
+mx.scratch
+!.settings
+
 *.d
 
 # Object files
