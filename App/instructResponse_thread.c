@@ -8,6 +8,6 @@ void instructResponse_thread(void *param)
         // if(command_flag.current_zero = 1)
         // {
         // }
-        osDelay(1000);
+        osDelay(100);
     }
 }
