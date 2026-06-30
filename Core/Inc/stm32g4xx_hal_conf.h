@@ -181,7 +181,11 @@ The real value may vary depending on the variations in voltage and temperature.*
   */
 
 #define  VDD_VALUE                   (3300UL) /*!< Value of VDD in mv */
+<<<<<<< HEAD
 #define  TICK_INT_PRIORITY           (14UL)    /*!< tick interrupt priority (lowest by default)  */
+=======
+#define  TICK_INT_PRIORITY           (5UL)    /*!< tick interrupt priority (lowest by default)  */
+>>>>>>> 57f1f94 (初次提交FOC代码)
 #define  USE_RTOS                     0U
 #define  PREFETCH_ENABLE              0U
 #define  INSTRUCTION_CACHE_ENABLE     1U

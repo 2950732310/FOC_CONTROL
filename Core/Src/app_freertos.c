@@ -28,7 +28,10 @@
 #include "led.h"
 #include "flash_thread.h"
 #include "serial_thread.h"
+<<<<<<< HEAD
 #include "instructResponse_thread.h"
+=======
+>>>>>>> 57f1f94 (初次提交FOC代码)
 #include "foc_thread.h"
 
 /* USER CODE END Includes */
@@ -73,6 +76,7 @@ const osThreadAttr_t serialThread_attributes = {
   .priority = (osPriority_t) osPriorityBelowNormal2,
   .stack_size = 512 * 4
 };
+<<<<<<< HEAD
 /* Definitions for instructThread */
 osThreadId_t instructThreadHandle;
 const osThreadAttr_t instructThread_attributes = {
@@ -80,6 +84,8 @@ const osThreadAttr_t instructThread_attributes = {
   .priority = (osPriority_t) osPriorityBelowNormal2,
   .stack_size = 256 * 4
 };
+=======
+>>>>>>> 57f1f94 (初次提交FOC代码)
 /* Definitions for focControlThrea */
 osThreadId_t focControlThreaHandle;
 const osThreadAttr_t focControlThrea_attributes = {
@@ -101,7 +107,10 @@ const osSemaphoreAttr_t flashSem_attributes = {
 void led_thread(void *argument);
 extern void flash_thread(void *argument);
 extern void serial_thread(void *argument);
+<<<<<<< HEAD
 extern void instructResponse_thread(void *argument);
+=======
+>>>>>>> 57f1f94 (初次提交FOC代码)
 extern void FOC_Control(void *argument);
 
 void MX_FREERTOS_Init(void); /* (MISRA C 2004 rule 8.1) */
@@ -146,9 +155,12 @@ void MX_FREERTOS_Init(void) {
   /* creation of serialThread */
   serialThreadHandle = osThreadNew(serial_thread, NULL, &serialThread_attributes);
 
+<<<<<<< HEAD
   /* creation of instructThread */
   instructThreadHandle = osThreadNew(instructResponse_thread, NULL, &instructThread_attributes);
 
+=======
+>>>>>>> 57f1f94 (初次提交FOC代码)
   /* creation of focControlThrea */
   focControlThreaHandle = osThreadNew(FOC_Control, NULL, &focControlThrea_attributes);
 

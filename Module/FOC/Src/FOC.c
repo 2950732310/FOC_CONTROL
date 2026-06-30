@@ -6,10 +6,17 @@
  * @param foc FOC数据结构体指针
  * @retval None
  */
+<<<<<<< HEAD
 void Sin_Cos_Value(FOC_DATA *foc)
 {
   foc->sin_val = sinf(foc->theta); // 电角度的正弦值
   foc->cos_val = cosf(foc->theta); // 电角度的余弦值
+=======
+void Sin_Cos_Value(FOC_DATA *foc , float elec_angle)
+{
+  foc->sin_val = sinf(elec_angle); // 电角度的正弦值
+  foc->cos_val = cosf(elec_angle); // 电角度的余弦值
+>>>>>>> 57f1f94 (初次提交FOC代码)
 }
 
 

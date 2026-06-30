@@ -56,10 +56,14 @@
 /* USER CODE END 0 */
 
 /* External variables --------------------------------------------------------*/
+<<<<<<< HEAD
 extern DMA_HandleTypeDef hdma_adc1;
 extern DMA_HandleTypeDef hdma_spi3_rx;
 extern DMA_HandleTypeDef hdma_spi3_tx;
 extern SPI_HandleTypeDef hspi3;
+=======
+extern ADC_HandleTypeDef hadc1;
+>>>>>>> 57f1f94 (初次提交FOC代码)
 extern DMA_HandleTypeDef hdma_usart1_tx;
 extern DMA_HandleTypeDef hdma_usart1_rx;
 extern UART_HandleTypeDef huart1;
@@ -153,6 +157,7 @@ void DebugMon_Handler(void)
 /******************************************************************************/
 
 /**
+<<<<<<< HEAD
   * @brief This function handles DMA1 channel1 global interrupt.
   */
 void DMA1_Channel1_IRQHandler(void)
@@ -192,6 +197,19 @@ void DMA1_Channel3_IRQHandler(void)
   /* USER CODE BEGIN DMA1_Channel3_IRQn 1 */
 
   /* USER CODE END DMA1_Channel3_IRQn 1 */
+=======
+  * @brief This function handles ADC1 and ADC2 global interrupt.
+  */
+void ADC1_2_IRQHandler(void)
+{
+  /* USER CODE BEGIN ADC1_2_IRQn 0 */
+
+  /* USER CODE END ADC1_2_IRQn 0 */
+  HAL_ADC_IRQHandler(&hadc1);
+  /* USER CODE BEGIN ADC1_2_IRQn 1 */
+
+  /* USER CODE END ADC1_2_IRQn 1 */
+>>>>>>> 57f1f94 (初次提交FOC代码)
 }
 
 /**
@@ -227,6 +245,7 @@ void USART1_IRQHandler(void)
 }
 
 /**
+<<<<<<< HEAD
   * @brief This function handles SPI3 global interrupt.
   */
 void SPI3_IRQHandler(void)
@@ -241,6 +260,8 @@ void SPI3_IRQHandler(void)
 }
 
 /**
+=======
+>>>>>>> 57f1f94 (初次提交FOC代码)
   * @brief This function handles DMA2 channel1 global interrupt.
   */
 void DMA2_Channel1_IRQHandler(void)
@@ -269,9 +290,13 @@ void DMA2_Channel2_IRQHandler(void)
 }
 
 /* USER CODE BEGIN 1 */
+<<<<<<< HEAD
 void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc) 
 {
   // /* 通知FOC线程采样完成 */
   osThreadFlagsSet(focControlThreaHandle, 0x01);
 }
+=======
+
+>>>>>>> 57f1f94 (初次提交FOC代码)
 /* USER CODE END 1 */

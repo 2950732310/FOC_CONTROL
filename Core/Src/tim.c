@@ -47,7 +47,11 @@ void MX_TIM1_Init(void)
   htim1.Init.CounterMode = TIM_COUNTERMODE_CENTERALIGNED1;
   htim1.Init.Period = 4249;
   htim1.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
+<<<<<<< HEAD
   htim1.Init.RepetitionCounter = 1;
+=======
+  htim1.Init.RepetitionCounter = 0;
+>>>>>>> 57f1f94 (初次提交FOC代码)
   htim1.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
   if (HAL_TIM_Base_Init(&htim1) != HAL_OK)
   {
@@ -62,7 +66,11 @@ void MX_TIM1_Init(void)
   {
     Error_Handler();
   }
+<<<<<<< HEAD
   sMasterConfig.MasterOutputTrigger = TIM_TRGO_UPDATE;
+=======
+  sMasterConfig.MasterOutputTrigger = TIM_TRGO_OC4REF;
+>>>>>>> 57f1f94 (初次提交FOC代码)
   sMasterConfig.MasterOutputTrigger2 = TIM_TRGO2_RESET;
   sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_ENABLE;
   if (HAL_TIMEx_MasterConfigSynchronization(&htim1, &sMasterConfig) != HAL_OK)
@@ -88,6 +96,14 @@ void MX_TIM1_Init(void)
   {
     Error_Handler();
   }
+<<<<<<< HEAD
+=======
+  sConfigOC.Pulse = htim1.Init.Period / 2U;
+  if (HAL_TIM_PWM_ConfigChannel(&htim1, &sConfigOC, TIM_CHANNEL_4) != HAL_OK)
+  {
+    Error_Handler();
+  }
+>>>>>>> 57f1f94 (初次提交FOC代码)
   sBreakDeadTimeConfig.OffStateRunMode = TIM_OSSR_DISABLE;
   sBreakDeadTimeConfig.OffStateIDLEMode = TIM_OSSI_DISABLE;
   sBreakDeadTimeConfig.LockLevel = TIM_LOCKLEVEL_OFF;

@@ -25,8 +25,11 @@
 /* USER CODE END 0 */
 
 SPI_HandleTypeDef hspi3;
+<<<<<<< HEAD
 DMA_HandleTypeDef hdma_spi3_rx;
 DMA_HandleTypeDef hdma_spi3_tx;
+=======
+>>>>>>> 57f1f94 (初次提交FOC代码)
 
 /* SPI3 init function */
 void MX_SPI3_Init(void)
@@ -46,7 +49,11 @@ void MX_SPI3_Init(void)
   hspi3.Init.CLKPolarity = SPI_POLARITY_HIGH;
   hspi3.Init.CLKPhase = SPI_PHASE_2EDGE;
   hspi3.Init.NSS = SPI_NSS_SOFT;
+<<<<<<< HEAD
   hspi3.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_128;
+=======
+  hspi3.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_8;
+>>>>>>> 57f1f94 (初次提交FOC代码)
   hspi3.Init.FirstBit = SPI_FIRSTBIT_MSB;
   hspi3.Init.TIMode = SPI_TIMODE_DISABLE;
   hspi3.Init.CRCCalculation = SPI_CRCCALCULATION_DISABLE;
@@ -88,6 +95,7 @@ void HAL_SPI_MspInit(SPI_HandleTypeDef* spiHandle)
     GPIO_InitStruct.Alternate = GPIO_AF6_SPI3;
     HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
+<<<<<<< HEAD
     /* SPI3 DMA Init */
     /* SPI3_RX Init */
     hdma_spi3_rx.Instance = DMA1_Channel2;
@@ -126,6 +134,8 @@ void HAL_SPI_MspInit(SPI_HandleTypeDef* spiHandle)
     /* SPI3 interrupt Init */
     HAL_NVIC_SetPriority(SPI3_IRQn, 14, 0);
     HAL_NVIC_EnableIRQ(SPI3_IRQn);
+=======
+>>>>>>> 57f1f94 (初次提交FOC代码)
   /* USER CODE BEGIN SPI3_MspInit 1 */
 
   /* USER CODE END SPI3_MspInit 1 */
@@ -150,12 +160,15 @@ void HAL_SPI_MspDeInit(SPI_HandleTypeDef* spiHandle)
     */
     HAL_GPIO_DeInit(GPIOB, GPIO_PIN_3|GPIO_PIN_4|GPIO_PIN_5);
 
+<<<<<<< HEAD
     /* SPI3 DMA DeInit */
     HAL_DMA_DeInit(spiHandle->hdmarx);
     HAL_DMA_DeInit(spiHandle->hdmatx);
 
     /* SPI3 interrupt Deinit */
     HAL_NVIC_DisableIRQ(SPI3_IRQn);
+=======
+>>>>>>> 57f1f94 (初次提交FOC代码)
   /* USER CODE BEGIN SPI3_MspDeInit 1 */
 
   /* USER CODE END SPI3_MspDeInit 1 */

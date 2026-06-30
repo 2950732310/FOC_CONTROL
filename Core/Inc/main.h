@@ -42,7 +42,11 @@ extern osSemaphoreId_t flashSemHandle;
 
 /* Exported constants --------------------------------------------------------*/
 /* USER CODE BEGIN EC */
+<<<<<<< HEAD
 extern uint16_t adc_buf[2];
+=======
+extern volatile uint16_t adc_buf[2];
+>>>>>>> 57f1f94 (初次提交FOC代码)
 /* USER CODE END EC */
 
 /* Exported macro ------------------------------------------------------------*/

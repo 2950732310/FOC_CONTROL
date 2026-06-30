@@ -2,10 +2,19 @@
 #include "cmsis_os.h"
 #include "usart_printf.h"
 #include "foc_thread.h"
+<<<<<<< HEAD
+=======
+#include "mt6816_encoder.h"
+>>>>>>> 57f1f94 (初次提交FOC代码)
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 57f1f94 (初次提交FOC代码)
 /*=================== 命令交互结构体 ===================*/
 CommandFlag_t command_flag = {0}; // 命令交互结构体
 
@@ -26,8 +35,15 @@ static const ParamDef_t g_param_table[] =
     { "vq_set",         PARAM_TYPE_FLOAT,  &motor.foc.vq_set,            "V",   "开环电压设置"       },
     { "ctrl_mode",      PARAM_TYPE_INT,    &motor.Control_Mode,          "", "[只读] 控制模式"      },
     /* ---- 只读参数 ---- */
+<<<<<<< HEAD
     { "angle",          PARAM_TYPE_FLOAT,  &motor.mt6816.angle, "",   "[只读] 机械角度" },  
     { "speed",          PARAM_TYPE_FLOAT,  &motor.foc.theta, "",   "[只读] 电角度(rad)" },
+=======
+    { "angle",          PARAM_TYPE_FLOAT,  &encoder_data.mec_angle,        "",   "[只读] 机械角度(弧度)" },
+    { "angle_deg",      PARAM_TYPE_FLOAT,  &encoder_data.mec_angle_deg,    "",   "[只读] 机械角度(角度)" },
+    { "elec_angle",          PARAM_TYPE_FLOAT,  &encoder_data.elec_angle,  "",   "[只读] 电角度(rad)" },
+    { "pos_estimate",   PARAM_TYPE_FLOAT,  &encoder_data.pos_estimate_,    "",   "[只读] 圈数" },
+>>>>>>> 57f1f94 (初次提交FOC代码)
     { "i_d",            PARAM_TYPE_FLOAT,  &motor.foc.i_d,   "A",  "[只读] D轴电流"      },
     { "i_q",            PARAM_TYPE_FLOAT,  &motor.foc.i_q,   "A",  "[只读] Q轴电流"      },
     { "i_a",            PARAM_TYPE_FLOAT,  &motor.foc.i_a,   "A",  "[只读] A相电流"      },
