@@ -1,29 +1,10 @@
 #MicroXplorer Configuration settings - do not modify
-<<<<<<< HEAD
-ADC1.Channel-0\#ChannelRegularConversion=ADC_CHANNEL_1
-ADC1.Channel-1\#ChannelRegularConversion=ADC_CHANNEL_2
 ADC1.CommonPathInternal=null|null|null|null
-ADC1.DMAContinuousRequests=ENABLE
-ADC1.EOCSelection=ADC_EOC_SEQ_CONV
-ADC1.EnableInjectedConversion=DISABLE
-ADC1.ExternalTrigConv=ADC_EXTERNALTRIG_T1_TRGO
-ADC1.IPParameters=Rank-0\#ChannelRegularConversion,Channel-0\#ChannelRegularConversion,SamplingTime-0\#ChannelRegularConversion,OffsetNumber-0\#ChannelRegularConversion,NbrOfConversionFlag,master,ExternalTrigConv,EOCSelection,Overrun,Rank-1\#ChannelRegularConversion,Channel-1\#ChannelRegularConversion,SamplingTime-1\#ChannelRegularConversion,OffsetNumber-1\#ChannelRegularConversion,NbrOfConversion,EnableInjectedConversion,DMAContinuousRequests,CommonPathInternal
-ADC1.NbrOfConversion=2
-ADC1.NbrOfConversionFlag=1
-ADC1.OffsetNumber-0\#ChannelRegularConversion=ADC_OFFSET_NONE
-ADC1.OffsetNumber-1\#ChannelRegularConversion=ADC_OFFSET_NONE
-ADC1.Overrun=ADC_OVR_DATA_OVERWRITTEN
-ADC1.Rank-0\#ChannelRegularConversion=1
-ADC1.Rank-1\#ChannelRegularConversion=2
-ADC1.SamplingTime-0\#ChannelRegularConversion=ADC_SAMPLETIME_6CYCLES_5
-ADC1.SamplingTime-1\#ChannelRegularConversion=ADC_SAMPLETIME_6CYCLES_5
-=======
-ADC1.CommonPathInternal=null|null|null|null
-ADC1.DMAContinuousRequests=ENABLE
+ADC1.DMAContinuousRequests=DISABLE
 ADC1.EOCSelection=ADC_EOC_SINGLE_CONV
 ADC1.EnableInjectedConversion=ENABLE
 ADC1.EnableRegularConversion=DISABLE
-ADC1.ExternalTrigInjecConv=ADC_EXTERNALTRIGINJEC_T1_CC4
+ADC1.ExternalTrigInjecConv=ADC_EXTERNALTRIGINJEC_T1_TRGO
 ADC1.IPParameters=master,EOCSelection,Overrun,EnableInjectedConversion,DMAContinuousRequests,EnableRegularConversion,Rank1_Channel,Rank2_Channel,Rank3_Channel,Rank4_Channel,InjNumberOfConversion,InjectedRank-7\#ChannelInjectedConversion,InjectedChannel-7\#ChannelInjectedConversion,InjectedSamplingTime-7\#ChannelInjectedConversion,InjectedOffsetNumber-7\#ChannelInjectedConversion,InjectedRank-8\#ChannelInjectedConversion,InjectedChannel-8\#ChannelInjectedConversion,InjectedSamplingTime-8\#ChannelInjectedConversion,InjectedOffsetNumber-8\#ChannelInjectedConversion,ExternalTrigInjecConv,CommonPathInternal
 ADC1.InjNumberOfConversion=2
 ADC1.InjectedChannel-7\#ChannelInjectedConversion=ADC_CHANNEL_1
@@ -39,108 +20,10 @@ ADC1.Rank1_Channel=ADC_CHANNEL_1
 ADC1.Rank2_Channel=ADC_CHANNEL_1
 ADC1.Rank3_Channel=ADC_CHANNEL_1
 ADC1.Rank4_Channel=ADC_CHANNEL_1
->>>>>>> 57f1f94 (初次提交FOC代码)
 ADC1.master=1
 CAD.formats=
 CAD.pinconfig=
 CAD.provider=
-<<<<<<< HEAD
-Dma.ADC1.0.Direction=DMA_PERIPH_TO_MEMORY
-Dma.ADC1.0.EventEnable=DISABLE
-Dma.ADC1.0.Instance=DMA1_Channel1
-Dma.ADC1.0.MemDataAlignment=DMA_MDATAALIGN_HALFWORD
-Dma.ADC1.0.MemInc=DMA_MINC_ENABLE
-Dma.ADC1.0.Mode=DMA_CIRCULAR
-Dma.ADC1.0.PeriphDataAlignment=DMA_PDATAALIGN_HALFWORD
-Dma.ADC1.0.PeriphInc=DMA_PINC_DISABLE
-Dma.ADC1.0.Polarity=HAL_DMAMUX_REQ_GEN_RISING
-Dma.ADC1.0.Priority=DMA_PRIORITY_LOW
-Dma.ADC1.0.RequestNumber=1
-Dma.ADC1.0.RequestParameters=Instance,Direction,PeriphInc,MemInc,PeriphDataAlignment,MemDataAlignment,Mode,Priority,SignalID,Polarity,RequestNumber,SyncSignalID,SyncPolarity,SyncEnable,EventEnable,SyncRequestNumber
-Dma.ADC1.0.SignalID=NONE
-Dma.ADC1.0.SyncEnable=DISABLE
-Dma.ADC1.0.SyncPolarity=HAL_DMAMUX_SYNC_NO_EVENT
-Dma.ADC1.0.SyncRequestNumber=1
-Dma.ADC1.0.SyncSignalID=NONE
-Dma.Request0=ADC1
-Dma.Request1=USART1_TX
-Dma.Request2=USART1_RX
-Dma.Request3=SPI3_RX
-Dma.Request4=SPI3_TX
-Dma.RequestsNb=5
-Dma.SPI3_RX.3.Direction=DMA_PERIPH_TO_MEMORY
-Dma.SPI3_RX.3.EventEnable=DISABLE
-Dma.SPI3_RX.3.Instance=DMA1_Channel2
-Dma.SPI3_RX.3.MemDataAlignment=DMA_MDATAALIGN_BYTE
-Dma.SPI3_RX.3.MemInc=DMA_MINC_ENABLE
-Dma.SPI3_RX.3.Mode=DMA_NORMAL
-Dma.SPI3_RX.3.PeriphDataAlignment=DMA_PDATAALIGN_BYTE
-Dma.SPI3_RX.3.PeriphInc=DMA_PINC_DISABLE
-Dma.SPI3_RX.3.Polarity=HAL_DMAMUX_REQ_GEN_RISING
-Dma.SPI3_RX.3.Priority=DMA_PRIORITY_LOW
-Dma.SPI3_RX.3.RequestNumber=1
-Dma.SPI3_RX.3.RequestParameters=Instance,Direction,PeriphInc,MemInc,PeriphDataAlignment,MemDataAlignment,Mode,Priority,SignalID,Polarity,RequestNumber,SyncSignalID,SyncPolarity,SyncEnable,EventEnable,SyncRequestNumber
-Dma.SPI3_RX.3.SignalID=NONE
-Dma.SPI3_RX.3.SyncEnable=DISABLE
-Dma.SPI3_RX.3.SyncPolarity=HAL_DMAMUX_SYNC_NO_EVENT
-Dma.SPI3_RX.3.SyncRequestNumber=1
-Dma.SPI3_RX.3.SyncSignalID=NONE
-Dma.SPI3_TX.4.Direction=DMA_MEMORY_TO_PERIPH
-Dma.SPI3_TX.4.EventEnable=DISABLE
-Dma.SPI3_TX.4.Instance=DMA1_Channel3
-Dma.SPI3_TX.4.MemDataAlignment=DMA_MDATAALIGN_BYTE
-Dma.SPI3_TX.4.MemInc=DMA_MINC_ENABLE
-Dma.SPI3_TX.4.Mode=DMA_NORMAL
-Dma.SPI3_TX.4.PeriphDataAlignment=DMA_PDATAALIGN_BYTE
-Dma.SPI3_TX.4.PeriphInc=DMA_PINC_DISABLE
-Dma.SPI3_TX.4.Polarity=HAL_DMAMUX_REQ_GEN_RISING
-Dma.SPI3_TX.4.Priority=DMA_PRIORITY_LOW
-Dma.SPI3_TX.4.RequestNumber=1
-Dma.SPI3_TX.4.RequestParameters=Instance,Direction,PeriphInc,MemInc,PeriphDataAlignment,MemDataAlignment,Mode,Priority,SignalID,Polarity,RequestNumber,SyncSignalID,SyncPolarity,SyncEnable,EventEnable,SyncRequestNumber
-Dma.SPI3_TX.4.SignalID=NONE
-Dma.SPI3_TX.4.SyncEnable=DISABLE
-Dma.SPI3_TX.4.SyncPolarity=HAL_DMAMUX_SYNC_NO_EVENT
-Dma.SPI3_TX.4.SyncRequestNumber=1
-Dma.SPI3_TX.4.SyncSignalID=NONE
-Dma.USART1_RX.2.Direction=DMA_PERIPH_TO_MEMORY
-Dma.USART1_RX.2.EventEnable=DISABLE
-Dma.USART1_RX.2.Instance=DMA2_Channel2
-Dma.USART1_RX.2.MemDataAlignment=DMA_MDATAALIGN_BYTE
-Dma.USART1_RX.2.MemInc=DMA_MINC_ENABLE
-Dma.USART1_RX.2.Mode=DMA_CIRCULAR
-Dma.USART1_RX.2.PeriphDataAlignment=DMA_PDATAALIGN_BYTE
-Dma.USART1_RX.2.PeriphInc=DMA_PINC_DISABLE
-Dma.USART1_RX.2.Polarity=HAL_DMAMUX_REQ_GEN_RISING
-Dma.USART1_RX.2.Priority=DMA_PRIORITY_LOW
-Dma.USART1_RX.2.RequestNumber=1
-Dma.USART1_RX.2.RequestParameters=Instance,Direction,PeriphInc,MemInc,PeriphDataAlignment,MemDataAlignment,Mode,Priority,SignalID,Polarity,RequestNumber,SyncSignalID,SyncPolarity,SyncEnable,EventEnable,SyncRequestNumber
-Dma.USART1_RX.2.SignalID=NONE
-Dma.USART1_RX.2.SyncEnable=DISABLE
-Dma.USART1_RX.2.SyncPolarity=HAL_DMAMUX_SYNC_NO_EVENT
-Dma.USART1_RX.2.SyncRequestNumber=1
-Dma.USART1_RX.2.SyncSignalID=NONE
-Dma.USART1_TX.1.Direction=DMA_MEMORY_TO_PERIPH
-Dma.USART1_TX.1.EventEnable=DISABLE
-Dma.USART1_TX.1.Instance=DMA2_Channel1
-Dma.USART1_TX.1.MemDataAlignment=DMA_MDATAALIGN_BYTE
-Dma.USART1_TX.1.MemInc=DMA_MINC_ENABLE
-Dma.USART1_TX.1.Mode=DMA_NORMAL
-Dma.USART1_TX.1.PeriphDataAlignment=DMA_PDATAALIGN_BYTE
-Dma.USART1_TX.1.PeriphInc=DMA_PINC_DISABLE
-Dma.USART1_TX.1.Polarity=HAL_DMAMUX_REQ_GEN_RISING
-Dma.USART1_TX.1.Priority=DMA_PRIORITY_LOW
-Dma.USART1_TX.1.RequestNumber=1
-Dma.USART1_TX.1.RequestParameters=Instance,Direction,PeriphInc,MemInc,PeriphDataAlignment,MemDataAlignment,Mode,Priority,SignalID,Polarity,RequestNumber,SyncSignalID,SyncPolarity,SyncEnable,EventEnable,SyncRequestNumber
-Dma.USART1_TX.1.SignalID=NONE
-Dma.USART1_TX.1.SyncEnable=DISABLE
-Dma.USART1_TX.1.SyncPolarity=HAL_DMAMUX_SYNC_NO_EVENT
-Dma.USART1_TX.1.SyncRequestNumber=1
-Dma.USART1_TX.1.SyncSignalID=NONE
-FREERTOS.BinarySemaphores01=flashSem,Dynamic,NULL,Depleted
-FREERTOS.FootprintOK=true
-FREERTOS.IPParameters=Tasks01,configUSE_COUNTING_SEMAPHORES,configCHECK_FOR_STACK_OVERFLOW,FootprintOK,configTOTAL_HEAP_SIZE,BinarySemaphores01
-FREERTOS.Tasks01=ledThread,16,128,led_thread,Default,NULL,Dynamic,NULL,NULL;flashThread,17,256,flash_thread,As external,NULL,Dynamic,NULL,NULL;serialThread,18,512,serial_thread,As external,NULL,Dynamic,NULL,NULL;instructThread,18,256,instructResponse_thread,As external,NULL,Dynamic,NULL,NULL;focControlThrea,20,512,FOC_Control,As external,NULL,Dynamic,NULL,NULL
-=======
 Dma.Request0=USART1_TX
 Dma.Request1=USART1_RX
 Dma.RequestsNb=2
@@ -182,7 +65,6 @@ FREERTOS.BinarySemaphores01=flashSem,Dynamic,NULL,Depleted
 FREERTOS.FootprintOK=true
 FREERTOS.IPParameters=Tasks01,configUSE_COUNTING_SEMAPHORES,configCHECK_FOR_STACK_OVERFLOW,FootprintOK,configTOTAL_HEAP_SIZE,BinarySemaphores01
 FREERTOS.Tasks01=ledThread,16,128,led_thread,Default,NULL,Dynamic,NULL,NULL;flashThread,17,256,flash_thread,As external,NULL,Dynamic,NULL,NULL;serialThread,18,512,serial_thread,As external,NULL,Dynamic,NULL,NULL;focControlThrea,20,512,FOC_Control,As external,NULL,Dynamic,NULL,NULL
->>>>>>> 57f1f94 (初次提交FOC代码)
 FREERTOS.configCHECK_FOR_STACK_OVERFLOW=0
 FREERTOS.configTOTAL_HEAP_SIZE=8192
 FREERTOS.configUSE_COUNTING_SEMAPHORES=1
@@ -231,19 +113,10 @@ Mcu.UserConstants=
 Mcu.UserName=STM32G431CBUx
 MxCube.Version=6.17.0
 MxDb.Version=DB.6.0.170
-<<<<<<< HEAD
-NVIC.BusFault_IRQn=true\:0\:0\:false\:false\:true\:false\:false\:false\:false
-NVIC.DMA1_Channel1_IRQn=true\:14\:0\:true\:false\:true\:true\:false\:true\:true
-NVIC.DMA1_Channel2_IRQn=true\:14\:0\:true\:false\:true\:true\:false\:true\:true
-NVIC.DMA1_Channel3_IRQn=true\:14\:0\:true\:false\:true\:true\:false\:true\:true
-NVIC.DMA2_Channel1_IRQn=true\:14\:0\:true\:false\:true\:false\:false\:true\:true
-NVIC.DMA2_Channel2_IRQn=true\:14\:0\:true\:false\:true\:false\:false\:true\:true
-=======
 NVIC.ADC1_2_IRQn=true\:5\:0\:false\:false\:true\:true\:true\:true\:true
 NVIC.BusFault_IRQn=true\:0\:0\:false\:false\:true\:false\:false\:false\:false
 NVIC.DMA2_Channel1_IRQn=true\:5\:0\:true\:false\:true\:false\:false\:true\:true
 NVIC.DMA2_Channel2_IRQn=true\:5\:0\:true\:false\:true\:false\:false\:true\:true
->>>>>>> 57f1f94 (初次提交FOC代码)
 NVIC.DebugMonitor_IRQn=true\:0\:0\:false\:false\:true\:false\:false\:false\:false
 NVIC.ForceEnableDMAVector=true
 NVIC.HardFault_IRQn=true\:0\:0\:false\:false\:false\:false\:false\:false\:false
@@ -251,26 +124,16 @@ NVIC.MemoryManagement_IRQn=true\:0\:0\:false\:false\:true\:false\:false\:false\:
 NVIC.NonMaskableInt_IRQn=true\:0\:0\:false\:false\:true\:false\:false\:false\:false
 NVIC.PendSV_IRQn=true\:15\:0\:false\:false\:false\:true\:false\:false\:false
 NVIC.PriorityGroup=NVIC_PRIORITYGROUP_4
-<<<<<<< HEAD
-NVIC.SPI3_IRQn=true\:14\:0\:true\:false\:true\:true\:true\:true\:true
-=======
->>>>>>> 57f1f94 (初次提交FOC代码)
+NVIC.SPI3_IRQn=true\:5\:0\:true\:false\:true\:true\:true\:true\:true
 NVIC.SVCall_IRQn=true\:0\:0\:false\:false\:false\:false\:false\:false\:false
 NVIC.SavedPendsvIrqHandlerGenerated=true
 NVIC.SavedSvcallIrqHandlerGenerated=true
 NVIC.SavedSystickIrqHandlerGenerated=true
 NVIC.SysTick_IRQn=true\:15\:0\:false\:false\:false\:true\:false\:true\:false
-<<<<<<< HEAD
-NVIC.TIM2_IRQn=true\:14\:0\:true\:false\:true\:false\:false\:true\:true
-NVIC.TimeBase=TIM2_IRQn
-NVIC.TimeBaseIP=TIM2
-NVIC.USART1_IRQn=true\:14\:0\:true\:false\:true\:true\:true\:true\:true
-=======
 NVIC.TIM2_IRQn=true\:5\:0\:true\:false\:true\:false\:false\:true\:true
 NVIC.TimeBase=TIM2_IRQn
 NVIC.TimeBaseIP=TIM2
 NVIC.USART1_IRQn=true\:7\:0\:true\:false\:true\:true\:true\:true\:true
->>>>>>> 57f1f94 (初次提交FOC代码)
 NVIC.UsageFault_IRQn=true\:0\:0\:false\:false\:true\:false\:false\:false\:false
 PA0.Mode=IN1-Single-Ended
 PA0.Signal=ADC1_IN1
@@ -344,13 +207,8 @@ ProjectManager.MainLocation=Core/Src
 ProjectManager.NoMain=false
 ProjectManager.PreviousToolchain=
 ProjectManager.ProjectBuild=false
-<<<<<<< HEAD
-ProjectManager.ProjectFileName=MY-FOC-V1.0.ioc
-ProjectManager.ProjectName=MY-FOC-V1.0
-=======
 ProjectManager.ProjectFileName=FOC_CONTROL.ioc
 ProjectManager.ProjectName=FOC_CONTROL
->>>>>>> 57f1f94 (初次提交FOC代码)
 ProjectManager.ProjectStructure=
 ProjectManager.RegisterCallBack=
 ProjectManager.StackSize=0x400
@@ -420,19 +278,11 @@ SH.S_TIM1_CH2.0=TIM1_CH2,PWM Generation2 CH2
 SH.S_TIM1_CH2.ConfNb=1
 SH.S_TIM1_CH3.0=TIM1_CH3,PWM Generation3 CH3
 SH.S_TIM1_CH3.ConfNb=1
-<<<<<<< HEAD
-SPI3.BaudRatePrescaler=SPI_BAUDRATEPRESCALER_128
-SPI3.CLKPhase=SPI_PHASE_2EDGE
-SPI3.CLKPolarity=SPI_POLARITY_HIGH
-SPI3.CRCCalculation=SPI_CRCCALCULATION_DISABLE
-SPI3.CalculateBaudRate=1.328125 MBits/s
-=======
 SPI3.BaudRatePrescaler=SPI_BAUDRATEPRESCALER_8
 SPI3.CLKPhase=SPI_PHASE_2EDGE
 SPI3.CLKPolarity=SPI_POLARITY_HIGH
 SPI3.CRCCalculation=SPI_CRCCALCULATION_DISABLE
 SPI3.CalculateBaudRate=21.25 MBits/s
->>>>>>> 57f1f94 (初次提交FOC代码)
 SPI3.DataSize=SPI_DATASIZE_8BIT
 SPI3.Direction=SPI_DIRECTION_2LINES
 SPI3.IPParameters=VirtualType,Mode,Direction,DataSize,CLKPolarity,CLKPhase,BaudRatePrescaler,CalculateBaudRate,CRCCalculation
@@ -442,19 +292,12 @@ TIM1.Channel-PWM\ Generation1\ CH1=TIM_CHANNEL_1
 TIM1.Channel-PWM\ Generation2\ CH2=TIM_CHANNEL_2
 TIM1.Channel-PWM\ Generation3\ CH3=TIM_CHANNEL_3
 TIM1.CounterMode=TIM_COUNTERMODE_CENTERALIGNED1
-<<<<<<< HEAD
-TIM1.IPParameters=Channel-PWM Generation1 CH1,Channel-PWM Generation2 CH2,Channel-PWM Generation3 CH3,CounterMode,PeriodNoDither,RepetitionCounter,TIM_MasterSlaveMode,TIM_MasterOutputTrigger
-TIM1.PeriodNoDither=4249
-TIM1.RepetitionCounter=1
-TIM1.TIM_MasterOutputTrigger=TIM_TRGO_UPDATE
-=======
 TIM1.IPParameters=Channel-PWM Generation1 CH1,Channel-PWM Generation2 CH2,Channel-PWM Generation3 CH3,CounterMode,PeriodNoDither,RepetitionCounter,TIM_MasterSlaveMode,TIM_MasterOutputTrigger,Prescaler
 TIM1.PeriodNoDither=4249
 TIM1.Prescaler=0
 TIM1.RepetitionCounter=0
-TIM1.TIM_MasterOutputTrigger=TIM_TRGO_OC4REF
->>>>>>> 57f1f94 (初次提交FOC代码)
-TIM1.TIM_MasterSlaveMode=TIM_MASTERSLAVEMODE_ENABLE
+TIM1.TIM_MasterOutputTrigger=TIM_TRGO_UPDATE
+TIM1.TIM_MasterSlaveMode=TIM_MASTERSLAVEMODE_DISABLE
 USART1.IPParameters=VirtualMode-Asynchronous
 USART1.VirtualMode-Asynchronous=VM_ASYNC
 VP_FREERTOS_VS_CMSIS_V2.Mode=CMSIS_V2

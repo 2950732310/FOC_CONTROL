@@ -10,14 +10,11 @@
 #define TS  					1.0f       				          // PWM 周期看作“单位 1”
 #define POLE_PAIRS 		11													// 电机极对数
 
-<<<<<<< HEAD
-=======
 #define TIMER1_CLK_MHz 170                                                   // 定时器时钟频率
 #define PWM_FREQUENCY 20000                                                  // PWM频率20KHz
 #define PWM_MEASURE_PERIOD (float)(1.0f / (float)PWM_FREQUENCY)              // PWM周期
 #define CURRENT_MEASURE_HZ PWM_FREQUENCY                                     // 电流频率
 #define CURRENT_MEASURE_PERIOD (float)(1.0f / (float)CURRENT_MEASURE_HZ)     // 电流周期
->>>>>>> 57f1f94 (初次提交FOC代码)
 
 /* 常用数学计算宏定义 */
 #define M_PI   (3.14159265358979323846f)	    	// 圆周率
@@ -57,13 +54,8 @@ typedef struct
     float vbus;             // 母线电压
     float inv_vbus;         // 母线电压的倒数
 
-<<<<<<< HEAD
-    float theta;            // 电角度
-		float theta_offset;			// 偏移电角度
-=======
     // float theta;            // 电角度
 		// float theta_offset;			// 偏移电角度
->>>>>>> 57f1f94 (初次提交FOC代码)
     float sin_val;          // 电角度的正弦值
     float cos_val;          // 电角度的余弦值
 
@@ -100,11 +92,7 @@ typedef struct
 }FOC_DATA;
 
 
-<<<<<<< HEAD
-void Sin_Cos_Value(FOC_DATA *foc);
-=======
 void Sin_Cos_Value(FOC_DATA *foc , float elec_angle);
->>>>>>> 57f1f94 (初次提交FOC代码)
 float Normalize_Angle(float angle);
 float Limit(float x, float low, float high);
 

@@ -4,11 +4,7 @@
 #include "main.h"
 #include "FOC.h"
 #include "BLDCMotor.h"
-<<<<<<< HEAD
-#include "mt6816.h"
-=======
 #include "mt6816_encoder.h"
->>>>>>> 57f1f94 (初次提交FOC代码)
 
 
 /* 电机错误状态枚举 */
@@ -45,11 +41,7 @@ typedef struct
 	STATE_MODE 		State_Mode;				// 运行状态
 	CONTROL_MODE 	Control_Mode;			// 闭环类型
 	FOC_DATA 			foc;							// FOC参数结构体
-<<<<<<< HEAD
-	Encoder_Date 	mt6816;						// 编码器数据结构体
-=======
 	ENCODER_DATA 	*mt6816;						// 编码器数据结构体
->>>>>>> 57f1f94 (初次提交FOC代码)
 }MOTOR_DATA;
 
 extern MOTOR_DATA motor;

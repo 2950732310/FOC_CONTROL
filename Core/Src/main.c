@@ -32,11 +32,6 @@
 #include "foc_thread.h"
 #include "BLDCMotor.h"
 #include "flash_thread.h"
-<<<<<<< HEAD
-#include "mt6816.h"
-=======
-
->>>>>>> 57f1f94 (初次提交FOC代码)
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -57,11 +52,7 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-<<<<<<< HEAD
-
-=======
 volatile uint16_t adc_buf[2] = {0};
->>>>>>> 57f1f94 (初次提交FOC代码)
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -73,10 +64,6 @@ void MX_FREERTOS_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-<<<<<<< HEAD
-uint16_t adc_buf[2];                  //ADC buffer     
-=======
->>>>>>> 57f1f94 (初次提交FOC代码)
 /* USER CODE END 0 */
 
 /**
@@ -119,21 +106,13 @@ int main(void)
 
   DWT_Delay_ms(1000);
   
-<<<<<<< HEAD
-  MT6816_DMA_Start();                                                       // 启动MT6816持续DMA采样
-
   Foc_Pwm_Start();																	                        // 设置PWM占空比
 	FOC_Align(&motor);                                                 // 电角度零点对齐
-  HAL_TIM_Base_Start_IT(&htim1);                                      // 启动PWM中断
-  HAL_ADC_Start_DMA(&hadc1,(uint32_t *)adc_buf,2);      // 启动 ADC DMA
-  
-=======
-  Foc_Pwm_Start();																	                        // 设置PWM占空比
-	FOC_Align(&motor);                                                 // 电角度零点对齐
-  HAL_TIM_Base_Start_IT(&htim1);                                      // 启动PWM中断
-  HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_4);                  // 启动ADC注入触发通道
-  HAL_ADCEx_InjectedStart_IT(&hadc1);                                 // 启动ADC中断
->>>>>>> 57f1f94 (初次提交FOC代码)
+  HAL_TIM_Base_Start(&htim1);                                         // 启动TIM1基础定时器
+  if (HAL_ADCEx_InjectedStart_IT(&hadc1) != HAL_OK)                    // 启动ADC注入中断触发
+  {
+    Error_Handler();
+  }
   /* USER CODE END 2 */
 
   /* Init scheduler */

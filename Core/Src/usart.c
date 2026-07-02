@@ -144,11 +144,7 @@ void HAL_UART_MspInit(UART_HandleTypeDef* uartHandle)
     __HAL_LINKDMA(uartHandle,hdmarx,hdma_usart1_rx);
 
     /* USART1 interrupt Init */
-<<<<<<< HEAD
-    HAL_NVIC_SetPriority(USART1_IRQn, 14, 0);
-=======
     HAL_NVIC_SetPriority(USART1_IRQn, 7, 0);
->>>>>>> 57f1f94 (初次提交FOC代码)
     HAL_NVIC_EnableIRQ(USART1_IRQn);
   /* USER CODE BEGIN USART1_MspInit 1 */
 

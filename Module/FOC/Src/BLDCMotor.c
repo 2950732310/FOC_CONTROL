@@ -15,10 +15,7 @@ void Foc_Pwm_Start(void)
     start_foc_pwm_a();
     start_foc_pwm_b();
     start_foc_pwm_c();
-<<<<<<< HEAD
-=======
     start_foc_pwm_trig();
->>>>>>> 57f1f94 (初次提交FOC代码)
     // 使能DRV8313
     enable_foc_pwm_driver();
 }
@@ -35,10 +32,7 @@ void Foc_Pwm_Stop(void)
     stop_foc_pwm_a();
     stop_foc_pwm_b();
     stop_foc_pwm_c();
-<<<<<<< HEAD
-=======
     stop_foc_pwm_trig();
->>>>>>> 57f1f94 (初次提交FOC代码)
     // 失能DRV8313
     disable_foc_pwm_driver();
 }
