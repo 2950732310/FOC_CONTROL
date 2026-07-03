@@ -7,6 +7,14 @@
 #include "mt6816_encoder.h"
 
 
+#define ADC_V   3.3f      // ADC 最大电压
+#define ADC_MAX 4095.0f      // ADC采样最大值
+#define RSHUNT  0.01f     // 电流传感器电阻值(Ω)
+#define GAIN    50.0f     // 电流传感器增益系数
+#define SCALE   (ADC_V / (ADC_MAX * RSHUNT * GAIN)) // 电流采样缩放系数
+
+
+
 /* 电机错误状态枚举 */
 typedef enum
 {
@@ -41,7 +49,7 @@ typedef struct
 	STATE_MODE 		State_Mode;				// 运行状态
 	CONTROL_MODE 	Control_Mode;			// 闭环类型
 	FOC_DATA 			foc;							// FOC参数结构体
-	ENCODER_DATA 	*mt6816;						// 编码器数据结构体
+	ENCODER_DATA 	*mt6816;					// 编码器数据结构体
 }MOTOR_DATA;
 
 extern MOTOR_DATA motor;
@@ -52,6 +60,7 @@ extern MOTOR_DATA motor;
  * @retval None
  */
 void FOC_Control(void *argument);
+
 
 
 /**
@@ -76,5 +85,6 @@ void FOC_CurrentOffsetCalibration(MOTOR_DATA *motor);
  *					M_ERR 故障
  */
 MOTOR_ERROR Open_Loop_Control(MOTOR_DATA *motor);
-
+MOTOR_ERROR Torque_Control(MOTOR_DATA *motor);
+MOTOR_ERROR Velocity_Control(MOTOR_DATA *motor);                            
 #endif

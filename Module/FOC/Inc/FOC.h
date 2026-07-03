@@ -41,6 +41,12 @@ typedef struct
 {
 	float ia_zero;          // A相电流零点
 	float ib_zero;          // B相电流零点
+  float id_kp;         // d轴电流环比例系数
+  float id_ki;         // d轴电流环积分系数
+  float iq_kp;         // q轴电流环比例系数
+  float iq_ki;         // q轴电流环积分系数
+  float vel_kp;        // 速度环比例系数
+  float vel_ki;        // 速度环积分系数
 }flash_data_t;
 extern flash_data_t flash_data;
 
@@ -78,6 +84,11 @@ typedef struct
 		
     float i_d;              // d轴电流
     float i_q;              // q轴电流
+    float i_d_ref;          // d轴电流参考值
+    float i_q_ref;          // q轴电流参考值
+
+    float vel_ref;          // 速度参考值 (rad/s)
+    float vel_fb;           // 速度反馈值 (rad/s)
 
     float v_d;              // d轴电压
     float v_q;              // q轴电压

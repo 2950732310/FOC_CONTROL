@@ -26,6 +26,7 @@ typedef struct
 typedef struct
 {
     uint8_t current_zero;           //电流环零点标定标志位
+    uint8_t flash_control;          //Flash控制标志位
 } CommandFlag_t;
 
 extern CommandFlag_t command_flag;

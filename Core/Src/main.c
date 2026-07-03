@@ -109,7 +109,7 @@ int main(void)
   Foc_Pwm_Start();																	                        // 设置PWM占空比
 	FOC_Align(&motor);                                                 // 电角度零点对齐
   HAL_TIM_Base_Start(&htim1);                                         // 启动TIM1基础定时器
-  if (HAL_ADCEx_InjectedStart_IT(&hadc1) != HAL_OK)                    // 启动ADC注入中断触发
+  if (HAL_ADCEx_InjectedStart_IT(&hadc1) != HAL_OK)                   // 启动ADC注入中断触发
   {
     Error_Handler();
   }
